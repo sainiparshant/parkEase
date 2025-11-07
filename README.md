@@ -69,34 +69,6 @@ Instant alerts for unauthorized vehicle movement.
 
 ---
 
-# 💰 Revenue Model
-
-✅ **Subscription Fees** – Parking operators pay for platform access  
-✅ **Convenience Fees** – Small user fee per booking  
-✅ **Analytics Insights** – Sell usage trends (aggregated) to urban planners  
-✅ **In-App Advertisements** – Local business promotions  
-✅ **Partnerships** – EV charging, ride-sharing, and rental companies  
-
----
-
-# 🔮 Future Scope
-
-### ⚡ EV Charging Integration
-Discover and book EV charging stations along with parking.
-
-### 🤖 AI Demand Prediction
-Predict peak hours, pricing, and dynamic slot allocation.
-
-### 🏙️ Smart City Integration
-End-to-end link with municipal systems and traffic management.
-
-### 🚁 Drone-Assisted Surveillance
-Real-time automated aerial parking monitoring.
-
-### 🚗 Robotic Valet Parking
-IoT + robotics-powered autonomous valet system.
-
----
 
 # 🎨 ParkEase Theme & Design System
 
