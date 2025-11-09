@@ -4,7 +4,7 @@ export default function FeatureCard({
   description,
   color,
 }: {
-  icon: string;
+  icon: React.ReactNode;
   title: string;
   description: string;
   color: string;
@@ -14,7 +14,8 @@ export default function FeatureCard({
       <div
         className={`w-14 h-14 bg-gradient-to-r ${color} rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform`}
       >
-        {icon}
+        {/* icon is a ReactNode (Lucide icon component) */}
+        <div className="w-6 h-6 text-white">{icon}</div>
       </div>
       <h3 className="text-xl font-bold text-[#0f172a] dark:text-white mb-3">
         {title}

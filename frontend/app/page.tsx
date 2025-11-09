@@ -1,10 +1,21 @@
 import Link from "next/link";
 import FeatureCard from "@/components/FeatureCard";
+import {
+  RefreshCw,
+  Calendar,
+  CreditCard,
+  Zap,
+  ShieldCheck,
+  Cpu,
+  Car,
+  Clock,
+  WifiOff,
+  AlertTriangle,
+  ArrowRight,
+} from "lucide-react";
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-emerald-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
-
-      {/* Hero Section */}
       <div className="container mx-auto px-6 py-16 md:py-24">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -35,19 +46,7 @@ export default function Page() {
                   className="inline-flex items-center justify-center gap-3 rounded-full bg-gradient-to-r from-[#10B981] to-[#3B82F6] text-white px-8 py-4 font-semibold shadow-xl hover:shadow-2xl transition-all hover:scale-105"
                 >
                   <span>Start Parking Smart</span>
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 7l5 5m0 0l-5 5m5-5H6"
-                    />
-                  </svg>
+                  <ArrowRight className="w-5 h-5" />
                 </Link>
 
                 <Link
@@ -111,7 +110,13 @@ export default function Page() {
                             : "bg-[#10B981]/20 text-[#10B981]"
                         }`}
                       >
-                        {spot % 3 === 0 ? "🚗" : "P"}
+                        {spot % 3 === 0 ? (
+                          <Car className="w-6 h-6 text-red-600" />
+                        ) : (
+                          <span className="font-semibold text-[#10B981]">
+                            P
+                          </span>
+                        )}
                       </div>
                     ))}
                   </div>
@@ -152,7 +157,6 @@ export default function Page() {
         </div>
       </div>
 
-      {/* Features Grid */}
       <section id="features" className="py-20 bg-white/50 dark:bg-slate-800/30">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
@@ -170,37 +174,37 @@ export default function Page() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <FeatureCard
-              icon="🔄"
+              icon={<RefreshCw className="w-6 h-6 text-white" />}
               title="Real-Time Availability"
               description="Live updates of every parking spot with occupancy status and EV readiness"
               color="from-[#10B981] to-[#22d3ee]"
             />
             <FeatureCard
-              icon="📱"
+              icon={<Calendar className="w-6 h-6 text-white" />}
               title="Smart Booking"
               description="Reserve your spot before arrival with guaranteed availability"
               color="from-[#3B82F6] to-[#8b5cf6]"
             />
             <FeatureCard
-              icon="💳"
+              icon={<CreditCard className="w-6 h-6 text-white" />}
               title="Cashless Payments"
               description="Seamless payments with UPI, cards, and Razorpay integration"
               color="from-[#8b5cf6] to-[#ec4899]"
             />
             <FeatureCard
-              icon="⚡"
+              icon={<Zap className="w-6 h-6 text-white" />}
               title="EV Ready"
               description="Dedicated EV spots with real-time charger status and availability"
               color="from-[#f59e0b] to-[#84cc16]"
             />
             <FeatureCard
-              icon="🛡️"
+              icon={<ShieldCheck className="w-6 h-6 text-white" />}
               title="Security Alerts"
               description="Anti-theft notifications and booking expiration alerts"
               color="from-[#ef4444] to-[#f59e0b]"
             />
             <FeatureCard
-              icon="🤖"
+              icon={<Cpu className="w-6 h-6 text-white" />}
               title="AI Optimization"
               description="Predictive analytics for demand forecasting and dynamic pricing"
               color="from-[#06b6d4] to-[#3B82F6]"
@@ -209,8 +213,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Technology Stack */}
-      <section id="tech" className="py-20">
+      <section id="tech" className="py-20 bg-white/50 dark:bg-slate-800/30">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-[#0f172a] dark:text-white mb-4">
@@ -247,6 +250,147 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <section id="problems" className="py-20 bg-white/50 dark:bg-slate-800/30">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-[#0f172a] dark:text-white mb-4">
+              The Urban Parking{" "}
+              <span className="bg-gradient-to-r from-[#f59e0b] to-[#ef4444] bg-clip-text text-transparent">
+                Predicament
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Modern cities face massive challenges that ParkEase solves
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {[
+              {
+                icon: <Car className="w-6 h-6 text-white" />,
+                title: "Traffic Congestion",
+                description:
+                  "Massive traffic jams caused by unorganized parking systems",
+                color: "from-red-500 to-orange-500",
+              },
+              {
+                icon: <Clock className="w-6 h-6 text-white" />,
+                title: "Wasted Time & Fuel",
+                description:
+                  "15-20 minutes daily searching for parking, wasting fuel and productivity",
+                color: "from-yellow-500 to-amber-500",
+              },
+              {
+                icon: <WifiOff className="w-6 h-6 text-white" />,
+                title: "No Real-Time Info",
+                description:
+                  "No live parking updates causing unnecessary chaos and frustration",
+                color: "from-gray-500 to-slate-600",
+              },
+              {
+                icon: <AlertTriangle className="w-6 h-6 text-white" />,
+                title: "Disorder & Penalties",
+                description:
+                  "Unauthorized parking blocks emergency routes and results in fines",
+                color: "from-orange-500 to-red-500",
+              },
+            ].map((problem, index) => (
+              <div
+                key={index}
+                className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all group"
+              >
+                <div
+                  className={`w-12 h-12 bg-gradient-to-r ${problem.color} rounded-lg flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform`}
+                >
+                  {problem.icon}
+                </div>
+                <h3 className="text-lg font-bold text-[#0f172a] dark:text-white mb-2">
+                  {problem.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                  {problem.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="py-20 bg-white/50 dark:bg-slate-800/30">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-[#0f172a] dark:text-white mb-4">
+              Easy{" "}
+              <span className="bg-gradient-to-r from-[#10B981] to-[#3B82F6] bg-clip-text text-transparent">
+                Integration
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              APIs and webhooks for seamless integration with city
+              infrastructure
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                title: "Hardware Integration",
+                description:
+                  "Connect with parking sensors, gates, and EV chargers",
+                features: [
+                  "IoT Sensors",
+                  "Camera Systems",
+                  "Payment Terminals",
+                  "EV Chargers",
+                ],
+              },
+              {
+                title: "City Dashboards",
+                description:
+                  "Real-time analytics and monitoring for city planners",
+                features: [
+                  "Live Analytics",
+                  "Revenue Reports",
+                  "Usage Patterns",
+                  "Traffic Flow",
+                ],
+              },
+              {
+                title: "Developer API",
+                description:
+                  "RESTful APIs for custom applications and services",
+                features: [
+                  "Webhooks",
+                  "Real-time Data",
+                  "Mobile SDK",
+                  "Documentation",
+                ],
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all"
+              >
+                <h3 className="text-xl font-bold text-[#0f172a] dark:text-white mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  {item.description}
+                </p>
+                <div className="space-y-2">
+                  {item.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-[#10B981] rounded-full"></div>
+                      <span className="text-sm text-gray-600 dark:text-gray-400">
+                        {feature}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-[#10B981] to-[#3B82F6]">
@@ -264,19 +408,7 @@ export default function Page() {
               className="inline-flex items-center justify-center gap-3 rounded-full bg-white text-[#10B981] px-8 py-4 font-semibold shadow-xl hover:shadow-2xl transition-all hover:scale-105"
             >
               <span>Get Started Free</span>
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 7l5 5m0 0l-5 5m5-5H6"
-                />
-              </svg>
+              <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               href="#demo"
@@ -287,9 +419,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-  
     </main>
   );
 }
