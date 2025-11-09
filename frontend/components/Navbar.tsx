@@ -33,10 +33,10 @@ export default function Navbar() {
           </Link>
         </div>
         <Link
-          href="/dashboard"
+          href="/sign-up"
           className="bg-gradient-to-r from-[#10B981] to-[#3B82F6] text-white px-6 py-2 rounded-full font-medium shadow-lg hover:shadow-xl transition-all hover:scale-105"
         >
-          Launch App
+          Register
         </Link>
       </div>
     </nav>
