@@ -227,8 +227,8 @@ export default function Page() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {[
               { name: "Next.js", purpose: "Frontend" },
-              { name: "Supabase", purpose: "Backend & Auth" },
-              { name: "PostgreSQL", purpose: "Database" },
+              { name: "Node js", purpose: "Backend & Auth" },
+              { name: "mongoDb", purpose: "Database" },
               { name: "Vercel", purpose: "Hosting" },
               { name: "Razorpay", purpose: "Payments" },
               { name: "AI/ML", purpose: "Optimization" },
