@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FeatureCard } from "@/components/FeatureCard";
+import FeatureCard from "@/components/FeatureCard";
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-emerald-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
