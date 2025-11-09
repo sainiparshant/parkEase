@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Home, FileText, ShieldCheck } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -10,14 +11,26 @@ export default function Footer() {
           </p>
 
           <div className="flex items-center gap-4">
-            <Link href="/" className="hover:text-[#10B981]">
-              Home
+            <Link
+              href="/"
+              className="hover:text-[#10B981] inline-flex items-center gap-2"
+            >
+              <Home className="w-4 h-4" />
+              <span>Home</span>
             </Link>
-            <Link href="/privacy" className="hover:text-[#10B981]">
-              Privacy
+            <Link
+              href="/privacy"
+              className="hover:text-[#10B981] inline-flex items-center gap-2"
+            >
+              <ShieldCheck className="w-4 h-4" />
+              <span>Privacy</span>
             </Link>
-            <Link href="/terms" className="hover:text-[#10B981]">
-              Terms
+            <Link
+              href="/terms"
+              className="hover:text-[#10B981] inline-flex items-center gap-2"
+            >
+              <FileText className="w-4 h-4" />
+              <span>Terms</span>
             </Link>
           </div>
         </div>

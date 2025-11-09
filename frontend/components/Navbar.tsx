@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MapPin, ArrowRight } from "lucide-react";
 
 export default function Navbar() {
   return (
@@ -6,7 +7,7 @@ export default function Navbar() {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 bg-gradient-to-r from-[#10B981] to-[#3B82F6] rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-sm">P</span>
+            <MapPin className="w-4 h-4 text-white" />
           </div>
           <span className="text-xl font-bold bg-gradient-to-r from-[#10B981] to-[#3B82F6] bg-clip-text text-transparent">
             ParkEase
@@ -34,9 +35,10 @@ export default function Navbar() {
         </div>
         <Link
           href="/dashboard"
-          className="bg-gradient-to-r from-[#10B981] to-[#3B82F6] text-white px-6 py-2 rounded-full font-medium shadow-lg hover:shadow-xl transition-all hover:scale-105"
+          className="inline-flex items-center gap-2 bg-gradient-to-r from-[#10B981] to-[#3B82F6] text-white px-6 py-2 rounded-full font-medium shadow-lg hover:shadow-xl transition-all hover:scale-105"
         >
           Launch App
+          <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
     </nav>
