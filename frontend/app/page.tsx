@@ -3,7 +3,6 @@ import FeatureCard from "@/components/FeatureCard";
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-emerald-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
-      {/* Navigation */}
 
       {/* Hero Section */}
       <div className="container mx-auto px-6 py-16 md:py-24">
@@ -290,13 +289,7 @@ export default function Page() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 bg-[#1F2937] text-white">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-gray-400">
-            ParkEase • Built with Next.js & Supabase — open to contributions.
-          </p>
-        </div>
-      </footer>
+  
     </main>
   );
 }
