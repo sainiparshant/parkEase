@@ -127,7 +127,7 @@ const SignIn = () => {
                                 type="submit"
                                 className="w-full bg-[#10B981] text-white hover:bg-[#0f9a6f] shadow-md"
                             >
-                                Sign in
+                                Login
                             </Button>
                         </div>
 

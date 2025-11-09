@@ -144,7 +144,7 @@ const SignUp = () => {
                         <div className="text-center text-sm text-[#475569] mt-2">
                             <span>Already have an account? </span>
                             <a href="/sign-in" className="font-medium text-[#3B82F6] hover:underline">
-                                Sign in
+                                Login
                             </a>
                         </div>
                     </form>
