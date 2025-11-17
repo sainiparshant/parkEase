@@ -32,6 +32,12 @@ export default function Navbar() {
           >
             Technology
           </Link>
+          <Link
+            href="/find"
+            className="text-gray-600 dark:text-gray-300 hover:text-[#10B981] transition-colors"
+          >
+            Find
+          </Link>
         </div>
         <Link
           href="/sign-up"
