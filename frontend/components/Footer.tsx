@@ -35,13 +35,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="py-8  text-white">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-gray-400">
-            ParkEase • Built with Next.js & Supabase — open to contributions.
-          </p>
-        </div>
-      </div>
+      
     </footer>
   );
 }
