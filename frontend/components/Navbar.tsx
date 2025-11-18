@@ -9,9 +9,12 @@ export default function Navbar() {
           <div className="w-8 h-8 bg-gradient-to-r from-[#10B981] to-[#3B82F6] rounded-lg flex items-center justify-center">
             <MapPin className="w-4 h-4 text-white" />
           </div>
-          <span className="text-xl font-bold bg-gradient-to-r from-[#10B981] to-[#3B82F6] bg-clip-text text-transparent">
+         <Link
+          href="/">
+           <span className="text-xl font-bold bg-gradient-to-r from-[#10B981] to-[#3B82F6] bg-clip-text text-transparent">
             ParkEase
           </span>
+         </Link>
         </div>
         <div className="hidden md:flex items-center gap-8">
           <Link
